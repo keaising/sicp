@@ -20,4 +20,8 @@
 (define (sqrt x)
 	(sqrt-iter 1.0 x))
 
+
+; scheme < p15-newton-iter.scm
+; (load "p15-newton-iter.scm")
+
 (sqrt 2)
