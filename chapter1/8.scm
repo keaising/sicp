@@ -8,15 +8,13 @@
 (define (square x)
 	(* x x))
 
-(define (good-enough x y)
+(define (cube x)
+	(* x x x))
+
+(define (good-enough old-guess new-guess)
 	(> 
-		0.0001 
-		(abs 
-			(- 
-				x 
-				(square y)
-			)
-		)
+		0.001 
+		(abs (/ (- old-guess new-guess) old-guess))
 	)
 )
 
