@@ -11,16 +11,14 @@
 (define (cube x)
 	(* x x x))
 
-(define (good-enough old-guess new-guess)
+(define (good-enough target guess)
 	(> 
-		0.001 
-		(abs (/ (- old-guess new-guess) old-guess))
+		0.0000000001 
+		(abs (/ (- target (cube guess)) target))
 	)
 )
 
-(define (sqrt-new x y)
-	(if (good-enough x y) 
-		y
-		(sqrt-new x (next x y))))
-
-(sqrt-new 2 1)
+(define (sqrt-new target guess)
+	(if (good-enough target guess) 
+		guess
+		(sqrt-new target (next target guess))))
