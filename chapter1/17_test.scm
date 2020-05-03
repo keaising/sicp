@@ -2,5 +2,5 @@
 
 (trace-entry fast-product)
 
-(product 3 10)
-(product 3 20)
+(fast-product 3 10)
+(fast-product 3 20)
