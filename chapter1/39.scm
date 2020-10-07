@@ -1,0 +1,17 @@
+(define (tan-cf x k)
+        (define (n i) 
+                (if (= 1 i)
+                    x
+                    (* x x)))
+        (define (d i)
+                (- (* 2 i) 1))
+        (define (cf i)
+                    (/ (n i) 
+                       (- (d i)
+                          (if (= i k)
+                              (/ (n i) (d i))
+                              (cf (+ i 1))))))
+        (cf 1))
+
+(define pi 3.14159)
+(tan-cf (/ pi 4) 10)
