@@ -1,0 +1,5 @@
+(define (cubic a b c)
+    (lambda (x) 
+        (+ (* a (cube x))
+           (* b (square x))
+           c)))
